@@ -1,6 +1,4 @@
-export const revalidate = 60;
-
-type Product = {
+export type Product = {
   id: number;
   title: string;
   price: number;
@@ -35,6 +33,7 @@ const ProductPage = async () => {
             </p>
             <p>Price: {product.price}</p>
             <p>Desription: {product.description}</p>
+            <p>Rendered at: {new Date().toISOString()}</p>
           </div>
         ))}
       </div>
