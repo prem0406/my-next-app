@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export type Product = {
   id: number;
   title: string;
@@ -25,9 +27,18 @@ const ProductPage = async () => {
   return (
     <div className="px-20 pt-10">
       <p className="text-center text-xl font-bold">Product Page</p>
+
       <div className="flex flex-col mt-4 gap-y-4">
         {products.map((product) => (
           <div key={product.id} className="border p-4 rounded-xl">
+            <Link href={`/products/${product.id}`} className="text-blue-500">
+              View Details
+            </Link>
+            <img
+              src={product.image}
+              alt={product.title}
+              className="w-20 h-20"
+            />
             <p>
               Title: <strong>{product.title}</strong>
             </p>
