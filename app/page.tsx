@@ -11,6 +11,9 @@ export default function Home() {
         <Link href="/stream-demo" className="text-blue-500">
           Go to Stream Demo Page
         </Link>
+        <Link href="/counter" className="text-blue-500">
+          Go to Counter Page
+        </Link>
       </div>
     </div>
   );
